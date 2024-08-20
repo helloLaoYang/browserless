@@ -2,7 +2,7 @@ ARG VERSION=latest
 FROM ghcr.io/browserless/base:$VERSION
 LABEL org.opencontainers.image.source https://github.com/browserless/browserless
 
-COPY fonts/* /usr/share/fonts/truetype/
+COPY fonts/ /usr/share/fonts/
 COPY src src/
 RUN rm -r src/routes/
 COPY src/routes/management src/routes/management/
